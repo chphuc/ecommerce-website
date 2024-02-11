@@ -57,10 +57,10 @@ const HomeBestSellerItem = ({ data }) => {
                     <div className="overflow-hidden relative" onMouseEnter={() => setIsHoverImage(true)} onMouseLeave={() => setIsHoverImage(false)}>
                         {/* Cart Image */}
                         <Link to={`/product/${data._id}`}>
-                            <div>
+                            <div className="relative">
                                 {/* Cart Image Main*/}
-                                <div>
-                                    <img className="w-64" src={data.images[0]} />
+                                <div className="w-64 h-64">
+                                    <img className="w-full h-full object-cover" src={data.images[0]} alt="Main Image" />
                                 </div>
                                 {/* Cart Image Hover*/}
                                 <div>
@@ -93,8 +93,8 @@ const HomeBestSellerItem = ({ data }) => {
                         {data.salePrice < data.regularPrice && <p className="font-medium">${data.salePrice}.00</p>}
                     </div>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
 
