@@ -51,7 +51,9 @@ const Index = ({ data }) => {
             <div>
                 <div className="overflow-hidden cursor-pointer relative" onMouseEnter={() => setIsHoverImage(true)} onMouseLeave={() => setIsHoverImage(false)}>
                     <Link to={`/product/${data._id}`}>
-                        <img alt='' src={data.images[0]} />
+                        <div className="w-64 h-64">
+                            <img className="w-full h-full object-cover" src={data.images[0]} alt="Main Image" />
+                        </div>
                     </Link>
                     <div className={"absolute top-0 -right-14 flex flex-col pt-4 pr-4 transition duration-200 z-10 " + (isHoverImage ? "-translate-x-14" : "")}>
                         {
