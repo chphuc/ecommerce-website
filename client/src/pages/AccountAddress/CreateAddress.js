@@ -4,6 +4,7 @@ import axios from 'axios'
 import Select from "../../components/Select"
 import Button from "../../components/Button"
 import Textarea from '../../components/Textarea'
+import Input from '../../components/Input'
 
 const ModalAddAddress = ({ handleCloseModalAdd, handleCreateAddress }) => {
     const [provinceList, setProvinceList] = useState([])
@@ -79,7 +80,7 @@ const ModalAddAddress = ({ handleCloseModalAdd, handleCreateAddress }) => {
             <div>
                 <p className="text-xl">New Address</p>
             </div>
-            <div className="flex flex-wrap items-center gap-4">
+            {/* <div className="flex flex-wrap items-center gap-4">
                 <div className="basis-full lg:flex-1">
                     <p className="mb-1 text-sm font-medium">Province</p>
                     <Select name="province" value={data.province} options={provinceList} onChange={handleOnChangeSelect} />
@@ -92,6 +93,36 @@ const ModalAddAddress = ({ handleCloseModalAdd, handleCreateAddress }) => {
                     <p className="mb-1 text-sm font-medium">Ward</p>
                     <Select name="village" value={data.village} options={villageList} onChange={handleOnChangeSelect} />
                 </div>
+            </div> */}
+            <div>
+                <label className="w-1/5 text-gray-700 text-sm font-bold">
+                    Province
+                </label>
+                <Input
+                    type="text"
+                    value={data.province}
+                    onChange={(e) => { setData(prev => ({ ...prev, province: e.target.value })) }}
+                />
+            </div>
+            <div>
+                <label className="w-1/5 text-gray-700 text-sm font-bold">
+                    District
+                </label>
+                <Input
+                    type="text"
+                    value={data.district}
+                    onChange={(e) => { setData(prev => ({ ...prev, district: e.target.value })) }}
+                />
+            </div>
+            <div>
+                <label className="w-1/5 text-gray-700 text-sm font-bold">
+                    Village
+                </label>
+                <Input
+                    type="text"
+                    value={data.village}
+                    onChange={(e) => { setData(prev => ({ ...prev, village: e.target.value })) }}
+                />
             </div>
             <div>
                 <p className="mb-1 text-sm font-medium">Specific Address</p>

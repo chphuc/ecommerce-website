@@ -37,3 +37,7 @@ REFRESH_TOKEN_EXPIRESIN=
 After you clone this repo to your desktop, go to its root directory and run `npm install` to install its dependencies.
 
 After successfully installing the required dependencies, you can launch the application by running `npm start`. This command will start the application, and you will be able to access it through the specified `PORT` that you have configured.
+
+---
+## Demo
+[![Watch the video](https://img.youtube.com/vi/DMYkKuctJro/maxresdefault.jpg)](https://youtu.be/DMYkKuctJro)
